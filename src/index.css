@@ -1,3 +1,9 @@
+/* :root {
+  --primary-color: #778899;
+  --error-color: #f85032;
+  --text-color: #0d0d0d;
+  --transition: all ease-in-out 0.3s;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +12,70 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body, #root {
+  height: 100%;
 }
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.auth {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.card {
+  background: #fff;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 90%;
+  margin: 0 auto;
+}
+.inputWrapper {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+input:not([type='checkbox']), textarea {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+input:not([type='checkbox']):focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+.login {
+  appearance: none;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  padding: 1em;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+.login:hover, .login:focus {
+  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.1);
+}
+.error {
+  margin: 0;
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  color: var(--error-color);
+  animation: 0.3s ease-in-out forwards fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+} */
