@@ -1,12 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User } from '../../interfaces/userinterface';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { User } from "../../interfaces/userinterface";
 
 const user = createSlice({
-  name: 'user',
+  name: "user",
   initialState: null as User | null,
   reducers: {
     setUser(state, { payload }: PayloadAction<User | null>) {
-      return state = (payload != null) ? payload : null;
+      return (state = payload != null ? payload : null);
     },
   },
 });

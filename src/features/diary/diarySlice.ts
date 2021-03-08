@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Diary } from '../../interfaces/diaryinterface';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Diary } from "../../interfaces/diaryinterface";
 
 const diaries = createSlice({
-  name: 'diaries',
+  name: "diaries",
   initialState: [] as Diary[],
   reducers: {
     addDiary(state, { payload }: PayloadAction<Diary[]>) {
