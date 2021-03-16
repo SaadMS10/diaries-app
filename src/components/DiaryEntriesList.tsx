@@ -39,9 +39,7 @@ const useStyles = makeStyles({
 });
 const DiaryEntriesList: FC = () => {
   const { entries } = useSelector((state: RootState) => state);
-  //     const { currentlyEditing: entry, canEdit, activeDiaryId } = useSelector(
-  //   (state: RootState) => state.editor
-  // );
+
   const dispatch = useAppDispatch();
   const { id }: any = useParams();
   const { currentlyEditing: canEdit } = useSelector(

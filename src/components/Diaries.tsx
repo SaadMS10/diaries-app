@@ -20,6 +20,7 @@ const Diaries: FC = () => {
   const diaries = useSelector((state: RootState) => state.diary);
   const user = useSelector((state: RootState) => state.user);
 
+
   useEffect(() => {
     const fetchDiaries = async () => {
       if (user) {
@@ -58,6 +59,7 @@ const Diaries: FC = () => {
     ])) as any;
     if (result.value) {
       const { value } = result;
+      console.log(value)
       const { diary, user: _user } = await http.post<
         Partial<Diary>,
         { diary: Diary; user: User }
